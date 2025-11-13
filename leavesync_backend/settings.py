@@ -140,3 +140,7 @@ DEFAULT_FROM_EMAIL = "no.reply.leavesync.1@gmail.com"
 
 ACCOUNT_EMAIL_HTML_TEMPLATE = "account/email/email_confirmation_message.html"
 
+
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+

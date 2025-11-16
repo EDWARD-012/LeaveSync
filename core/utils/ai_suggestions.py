@@ -12,8 +12,7 @@ from core.models import Holiday, LeaveBalance, LeaveRequest, WorkWeek
 GEMINI_API_KEY = getattr(settings, "GEMINI_API_KEY", None)
 GEMINI_MODEL = getattr(settings, "GEMINI_MODEL", "gemini-1.5-flash")
 
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
+
 
 SMART_TOOLTIP = "💡 Smart Leave Suggestion: Take off to extend your break!"
 

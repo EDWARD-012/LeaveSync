@@ -183,4 +183,4 @@ if not DEBUG:
     # keep SMTP working in production
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
     ACCOUNT_EMAIL_REQUIRED = True
-    ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+    ACCOUNT_EMAIL_VERIFICATION = "none"

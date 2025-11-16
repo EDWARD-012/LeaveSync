@@ -59,7 +59,35 @@
     <h2>Create Your Account</h2>
     <form method="post">
       {% csrf_token %}
-      {{ form.as_p }}
+
+      <label for="{{ form.username.id_for_label }}">Username</label>
+      <input type="text" name="{{ form.username.html_name }}" id="{{ form.username.id_for_label }}"
+             value="{{ form.username.value|default_if_none:'' }}" required>
+      {% if form.username.errors %}
+        <div style="color:red;">{{ form.username.errors }}</div>
+      {% endif %}
+
+      <label for="{{ form.email.id_for_label }}">Email</label>
+      <input type="email" name="{{ form.email.html_name }}" id="{{ form.email.id_for_label }}"
+             value="{{ form.email.value|default_if_none:'' }}" required>
+      {% if form.email.errors %}
+        <div style="color:red;">{{ form.email.errors }}</div>
+      {% endif %}
+
+      <label for="{{ form.password1.id_for_label }}">Password</label>
+      <input type="password" name="{{ form.password1.html_name }}" id="{{ form.password1.id_for_label }}"
+             required>
+      {% if form.password1.errors %}
+        <div style="color:red;">{{ form.password1.errors }}</div>
+      {% endif %}
+
+      <label for="{{ form.password2.id_for_label }}">Confirm Password</label>
+      <input type="password" name="{{ form.password2.html_name }}" id="{{ form.password2.id_for_label }}"
+             required>
+      {% if form.password2.errors %}
+        <div style="color:red;">{{ form.password2.errors }}</div>
+      {% endif %}
+
       <button type="submit">Sign Up</button>
     </form>
     <p>Already have an account? <a href="/accounts/login/">Login</a></p>

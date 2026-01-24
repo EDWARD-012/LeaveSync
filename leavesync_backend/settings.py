@@ -14,9 +14,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "changeme")
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = [
-    "leavesync-ai.onrender.com",
-    "localhost",
-    "127.0.0.1",
+    "*"
 ]
 
 SITE_ID = 1

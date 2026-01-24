@@ -31,7 +31,6 @@ proto-plus==1.26.1
 
 # --- Files / PDFs ---
 pdfplumber==0.11.8
-pdfminer.six==20250506
 pillow==12.0.0
 openpyxl==3.1.5
 pypdfium2==5.0.0
@@ -50,3 +49,4 @@ packaging==25.0
 typing_extensions==4.15.0
 colorama==0.4.6
 sib-api-v3-sdk
+

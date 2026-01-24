@@ -1,17 +1,18 @@
 {
-    "builds": [{
-        "src": "config/wsgi.py",
-        "use": "@vercel/python",
-        "config": { 
-            "maxLambdaSize": "15mb", 
-            "runtime": "python3.9",
-            "installCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput"
-        }
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "config/wsgi.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9",
+        "maxLambdaSize": "15mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ]
 }

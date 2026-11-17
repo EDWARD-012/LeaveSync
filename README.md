@@ -3,6 +3,8 @@
 LeaveSync-AI is a modern web-based Leave Management System designed to automate leave requests, approvals, notifications, and holiday planning.  
 It supports role-based dashboards for Employees, Managers, and Admins, along with smart AI leave recommendations.
 
+Live app: https://leavesync.edward7780.com
+
 ## 🚀 Features
 
 - 🔐 User Registration & Login  

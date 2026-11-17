@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /leave/
+Disallow: /company/
+Disallow: /api/
+
+Sitemap: https://leavesync.edward7780.com/sitemap.xml
